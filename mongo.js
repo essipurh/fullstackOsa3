@@ -28,8 +28,8 @@ const person = new Person({
 
 if (process.argv.length > 3) {
   person.save().then(response => {
-  console.log(`added ${response.name} number ${response.number} to phonebook`)
-  mongoose.connection.close()
+    console.log(`added ${response.name} number ${response.number} to phonebook`)
+    mongoose.connection.close()
   })
 }
 else {
@@ -38,6 +38,6 @@ else {
     result.forEach(person => {
       console.log(`${person.name} ${person.number}`)
     })
-  mongoose.connection.close()
+    mongoose.connection.close()
   })
 }
